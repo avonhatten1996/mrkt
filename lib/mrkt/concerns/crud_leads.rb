@@ -24,7 +24,7 @@ module Mrkt
     end
 
     def createupdate_leads(leads, action: 'createOrUpdate', lookup_field: nil, partition_name: nil, async_processing: nil)
-      post_json('/rest/v1/leads.json') do
+      post_json('/rest/v1/leads/push.json') do
         params = {
           action: action,
           input: leads

@@ -121,7 +121,7 @@ describe Mrkt::CrudLeads do
     subject { client.createupdate_leads(leads, lookup_field: :email) }
 
     before do
-      stub_request(:post, "https://#{host}/rest/v1/leads.json")
+      stub_request(:post, "https://#{host}/rest/v1/leads/push.json")
         .with(json_stub(request_body))
         .to_return(json_stub(response_stub))
     end
